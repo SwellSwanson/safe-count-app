@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Safe Count App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <h1>Safe Count Calculator</h1>
+
+  <h2>Manual Input</h2>
+  <form method="post" action="/calculate">
+    <label>$100s: <input type="number" name="hundreds" value="0"></label><br>
+    <label>$50s: <input type="number" name="fifties" value="0"></label><br>
+    <label>$20s: <input type="number" name="twenties" value="0"></label><br>
+    <label>$10s: <input type="number" name="tens" value="0"></label><br>
+    <label>$5s: <input type="number" name="fives" value="0"></label><br>
+    <label>$1s: <input type="number" name="ones" value="0"></label><br><br>
+
+    <h3>Coin Rolls</h3>
+    <label>Penny Rolls ($0.50): <input type="number" name="pennies" value="0"></label><br>
+    <label>Nickel Rolls ($2.00): <input type="number" name="nickels" value="0"></label><br>
+    <label>Dime Rolls ($5.00): <input type="number" name="dimes" value="0"></label><br>
+    <label>Quarter Rolls ($10.00): <input type="number" name="quarters" value="0"></label><br><br>
+
+    <button type="submit">Calculate Total</button>
+  </form>
+
+  <h2>Upload a Slip</h2>
+  <form method="post" action="/upload" enctype="multipart/form-data">
+    <input type="file" name="slip_image" accept="image/*" capture="camera"><br><br>
+    <button type="submit">Upload and Calculate</button>
+  </form>
+
+</body>
+</html>
 

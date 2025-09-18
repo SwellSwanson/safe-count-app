@@ -20,7 +20,12 @@
   <label>$10s: <input type="number" id="tens" value="0"></label>
   <label>$5s: <input type="number" id="fives" value="0"></label>
   <label>$1s: <input type="number" id="ones" value="0"></label>
-  <label>Coins ($): <input type="number" id="coins" step="0.01" value="0"></label>
+
+  <h3>Coin Rolls</h3>
+  <label>Penny Rolls ($0.50): <input type="number" id="pennies" value="0"></label>
+  <label>Nickel Rolls ($2.00): <input type="number" id="nickels" value="0"></label>
+  <label>Dime Rolls ($5.00): <input type="number" id="dimes" value="0"></label>
+  <label>Quarter Rolls ($10.00): <input type="number" id="quarters" value="0"></label>
 
   <button onclick="calculate()">Calculate Total</button>
 
@@ -35,7 +40,10 @@
         (document.getElementById('tens').valueAsNumber || 0) * 10 +
         (document.getElementById('fives').valueAsNumber || 0) * 5 +
         (document.getElementById('ones').valueAsNumber || 0) * 1 +
-        (document.getElementById('coins').valueAsNumber || 0);
+        (document.getElementById('pennies').valueAsNumber || 0) * 0.50 +
+        (document.getElementById('nickels').valueAsNumber || 0) * 2.00 +
+        (document.getElementById('dimes').valueAsNumber || 0) * 5.00 +
+        (document.getElementById('quarters').valueAsNumber || 0) * 10.00;
 
       document.getElementById('total').textContent = 
         "Total: $" + total.toFixed(2);

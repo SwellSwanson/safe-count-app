@@ -1,1 +1,4 @@
-Dependencies
+Flask
+Pillow
+pytesseract
+gunicorn
